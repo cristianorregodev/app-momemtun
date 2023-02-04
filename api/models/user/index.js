@@ -10,9 +10,13 @@ const UserSchema = new Schema({
     required: [true, 'EL correo de usuario es obligatorio.'],
     unique: true,
   },
+  contact_number: {
+    type: String,
+    required: [true, 'El número de contacto es obligatorio'],
+  },
   password: {
     type: String,
-    required: true,
+    required: [true, 'Debe suministrar una contraseña'],
   },
   image: {
     type: String,
