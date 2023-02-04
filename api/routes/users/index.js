@@ -9,7 +9,7 @@ const {
   usersDelete,
 } = require('../../controllers/users')
 const { emailExists, userExists } = require('../../helpers/databaseValidators')
-const { fieldValidation } = require('../../middlewares/fieldValidation')
+const { fieldValidation, jwtValidation } = require('../../middlewares')
 
 const router = Router()
 
@@ -40,7 +40,12 @@ router.patch(
 
 router.delete(
   '/:id',
-  [check('id', 'No es un ID válido').isMongoId(), check('id').custom(userExists), fieldValidation],
+  [
+    jwtValidation,
+    check('id', 'No es un ID válido').isMongoId(),
+    check('id').custom(userExists),
+    fieldValidation,
+  ],
   usersDelete
 )
 
