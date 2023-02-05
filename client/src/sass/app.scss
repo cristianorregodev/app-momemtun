@@ -1,0 +1,14 @@
+// Globales
+@import "base/normalize";
+@import "base/variables";
+@import "base/mixins";
+@import "base/globals";
+
+
+//Components
+@import "components/button";
+
+
+//Pages
+@import "pages/home";
+@import "pages/inicioSesion";

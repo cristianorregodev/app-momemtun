@@ -1,0 +1,60 @@
+.container__home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/src/assets/img/backgroundHomeM.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 8rem;
+
+    header {
+        text-align: center;
+
+        img {
+            box-shadow: 0px 8px 4px 0 rgb(48 48 48 / 59%);
+            transition: box-shadow 0.5s;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 2rem 0;
+
+            span {
+                font-family: sans-serif;
+                font-weight: 100;
+            }
+        }
+
+    }
+
+    .container__button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include tablet {
+        background-image: url('/src/assets/img/backgroundHomeD.webp');
+        background-repeat: no-repeat;
+        background-position: center 130%;
+        align-items: normal;
+        header{
+            h1{
+                font-size: 4.5rem;
+            }
+        }
+        
+        .container__button {
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-bottom: 3rem;
+        }
+        
+        P{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+    }
+}
