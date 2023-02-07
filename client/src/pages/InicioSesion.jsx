@@ -19,7 +19,9 @@ export const InicioSesion = () => {
                 <a href="#"><p className='forget__password'>Olvidaste tu contraseña?</p></a>
             </header>
             <div className='container__button'>
+                <Link to='/profile'>
                 <Button text={'Ingresar'}></Button>
+                </Link>
             </div>
             <a href="#"><p>Necesitas Ayuda?</p></a>
         </div>
