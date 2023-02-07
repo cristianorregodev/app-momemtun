@@ -2,12 +2,11 @@ const { request, response } = require('express')
 const bcryptjs = require('bcryptjs')
 
 const { User } = require('../../models')
-const { findById } = require('../../models/user')
 
 const usersGet = async (req = request, res = response) => {
   const users = await User.find({ active: true })
 
-  res.json({ result: true, data: users })
+  res.json({ success: true, data: users })
 }
 
 const usersPost = async (req = request, res = response) => {
@@ -20,7 +19,7 @@ const usersPost = async (req = request, res = response) => {
   user.password = bcryptjs.hashSync(password, salt)
 
   await user.save()
-  res.json({ result: true, data: user })
+  res.json({ success: true, data: user })
 }
 
 const usersPut = async (req = request, res = response) => {
@@ -36,7 +35,7 @@ const usersPut = async (req = request, res = response) => {
   await User.findByIdAndUpdate(id, rest)
   const user = await User.findById(id)
 
-  res.json({ result: true, data: user })
+  res.json({ success: true, data: user })
 }
 
 const usersPatch = async (req = request, res = response) => {
@@ -50,7 +49,7 @@ const usersPatch = async (req = request, res = response) => {
   await User.findByIdAndUpdate(id, password)
   const user = await User.findById(id)
 
-  res.json({ result: true, data: user })
+  res.json({ success: true, data: user })
 }
 
 const usersDelete = async (req = request, res = response) => {
@@ -60,7 +59,7 @@ const usersDelete = async (req = request, res = response) => {
   const user = await User.findById(id)
 
   res.json({
-    result: true,
+    success: true,
     data: user,
   })
 }

@@ -7,8 +7,9 @@ class Server {
     this.app = express()
     this.port = process.env.PORT
     this.path = {
-      users: '/api/users',
       auth: '/api/auth',
+      completions: '/api/completions',
+      users: '/api/users',
     }
 
     //* Database connection
@@ -38,6 +39,7 @@ class Server {
 
   routes() {
     this.app.use(this.path.auth, require('../routes/auth'))
+    this.app.use(this.path.completions, require('../routes/completions'))
     this.app.use(this.path.users, require('../routes/users'))
   }
 
