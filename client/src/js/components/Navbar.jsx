@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import { AppLogo } from '../../assets/icons'
 
 export const Navbar = () => {
@@ -10,15 +11,26 @@ export const Navbar = () => {
   }
   return (
     <header className="navbar">
-      <a href="#" className="logo">
+      <Link to="/" className="logo">
         <img src={AppLogo} alt="Logo" />
-      </a>
+      </Link>
 
       <nav ref={navRef}>
-        <a href="#">Inicio</a>
-        <a href="#">Texto</a>
-        <a href="#">Imágenes</a>
-        <a href="#">Código</a>
+        <Link to="/profile" onClick={showNavBar}>
+          Perfil
+        </Link>
+        <Link to="/" onClick={showNavBar}>
+          Inicio
+        </Link>
+        <Link to="/text-generator" onClick={showNavBar}>
+          Texto
+        </Link>
+        <a href="#" onClick={showNavBar}>
+          Imágenes
+        </a>
+        <a href="#" onClick={showNavBar}>
+          Código
+        </a>
         <button className="nav_close_btn" onClick={showNavBar}>
           <FaTimes />
         </button>

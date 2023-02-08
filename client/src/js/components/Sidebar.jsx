@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   HomeIconTransparent,
   TextIconTransparent,
@@ -9,18 +10,18 @@ import {
 export const Sidebar = () => {
   return (
     <header className="sidebar">
-      <div className="user_photo">
+      <Link to="/profile" className="user_photo">
         <img src={HomeIconTransparent} alt="" />
-      </div>
+      </Link>
       <nav>
-        <a href="#">
+        <Link to="/welcome">
           <img src={HomeIconTransparent} alt="Icon" />
           Inicio
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/text-generator">
           <img src={TextIconTransparent} alt="Icon" />
           Texto
-        </a>
+        </Link>
         <a href="#" className="disabled">
           <img src={ImageIconTransparent} alt="Icon" />
           Imágenes

@@ -1,12 +1,14 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
 import { Navbar } from '../components/Navbar'
 import { Sidebar } from '../components/Sidebar'
+import { AuthContext } from '../Context/AuthContext'
 
 export const Layout = memo(({ children }) => {
-  const isAuth = true
+  const { isAuth } = useContext(AuthContext)
+
   return (
     <>
-      <Navbar />
+      {isAuth && <Navbar />}
       {isAuth && <Sidebar />}
       {children}
     </>
