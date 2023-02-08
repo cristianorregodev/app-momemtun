@@ -1,0 +1,65 @@
+header.sidebar {
+  display: none;
+  @include desktop {
+    position: fixed;
+    height: 100vh;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14%;
+    background: rgb(199, 167, 248);
+    background: linear-gradient(
+      29deg,
+      rgba(199, 167, 248, 1) 0%,
+      rgba(88, 64, 132, 1) 34%,
+      rgba(76, 64, 132, 1) 100%
+    );
+    border-radius: 0 5rem 5rem 0;
+
+    .user_photo {
+      margin-top: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      background-color: red;
+      overflow: hidden;
+      box-shadow: 13px 24px 15px 0px rgba(88, 64, 132, 1);
+      img {
+        width: 100%;
+      }
+    }
+    nav {
+      display: grid;
+      gap: 4rem;
+      a {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+        color: $textWhite;
+        font-weight: bold;
+        img {
+          transition: all 0.5s ease;
+        }
+        &:hover {
+          img {
+            transform: translateX(0.6rem);
+          }
+        }
+      }
+      a.disabled {
+        opacity: 0.5;
+        &:hover {
+          img {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}

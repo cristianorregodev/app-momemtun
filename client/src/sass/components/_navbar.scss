@@ -1,0 +1,81 @@
+header.navbar {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: transparent;
+  //   box-shadow: 0px 10px 7px -4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 100%;
+
+  .logo {
+    width: 60px;
+  }
+  .responsive_nav {
+    transform: none;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: $firstColor;
+    transition: 1s;
+    transform: translateY(-100vh);
+    z-index: 100000;
+
+    a {
+      margin: 0 1.6rem;
+      color: $textWhite;
+
+      &:hover {
+        color: $firstColor;
+      }
+    }
+    .nav_close_btn {
+      padding: 0.5rem;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: $textWhite;
+      font-size: 2rem;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: auto;
+
+      @include desktop {
+        visibility: hidden;
+        opacity: 0;
+      }
+      box-shadow: none;
+    }
+  }
+  button.nav_open_btn {
+    padding: 0.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: $textWhite;
+    font-size: 2rem;
+    width: auto;
+    margin-right: -0.5rem;
+    box-shadow: none;
+
+    @include desktop {
+      display: none;
+    }
+  }
+  @include desktop {
+    display: none;
+  }
+}
