@@ -1,1 +1,135 @@
- 
+section.container__profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/src/assets/img/backgroundProfileM.webp');
+    background-size: cover;
+    background-position: center 100%;
+    height: 100vh;
+    padding-top: 4rem;
+
+    div.container__header-profile {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 100;
+            margin-top: 2rem;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        p {
+            color: $textWhite;
+            text-align: left;
+            margin: 0;
+            opacity: 70%;
+        }
+
+        h3 {
+            font-weight: 100;
+        }
+
+        div.container__user {
+            display: flex;
+            justify-content: space-evenly;
+
+            :nth-child(1) {
+                margin-right: 5rem;
+            }
+        }
+
+        div.container__data {
+            background-color: $textWhite;
+            margin-top: 3.5rem;
+            margin-bottom: 2rem;
+            padding: 2rem 19rem 0.7rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0px 7px 3px 0px rgb(48 48 48 / 59%);
+
+            p {
+                color: rgba(128, 128, 128, 0.664);
+                text-align: start;
+                padding: 1rem;
+            }
+        }
+
+    }
+
+
+    div.container__buttons {
+        img {
+            margin-right: 2rem;
+            box-shadow: 0px 7px 3px 0px rgb(48 48 48 / 59%);
+            transition: box-shadow 0.5s;
+        }
+
+        h4 {
+            font-size: 2rem;
+            color: $firstColor;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        @include tablet {
+            margin-top: 5rem;
+
+            h4 {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            img {
+                width: 10rem;
+                margin-right: 5rem;
+            }
+
+            img.code {
+                width: 10rem;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    @include tablet {
+        align-items: start;
+        flex-direction: row;
+        justify-content: end;
+        background-image: url('/src/assets/img/backgroundProfileD.webp');
+        background-position: 6rem 70%;
+        padding: 7rem 6rem;
+        gap: 9rem;
+
+        div.container__header-profile {
+            h2 {
+                font-size: 2.7rem;
+                font-weight: 600;
+                color: $textBlack;
+                margin: 0;
+            }
+
+            div.container__data {
+                margin: 0;
+                width: 50rem;
+                padding: 1rem 0rem 0.7rem 0rem;
+
+                p {
+                    padding: 2.7rem;
+                }
+            }
+        }
+
+        div.container__user {
+            div {
+                display: none;
+            }
+
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from '../../pages/Home'
-import { InicioSesion } from '../../pages/InicioSesion'
+import { Login } from '../../pages/Login'
 import { Profile } from '../../pages/Profile'
 import { Welcome } from '../../pages/Welcome'
 import { Layout } from '../containers/Layout'
@@ -16,7 +16,7 @@ export const App = () => {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<InicioSesion />} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/welcome" element={<Welcome />} />
           </Routes>
