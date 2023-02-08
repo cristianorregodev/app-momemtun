@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="534.4" height="981.239" viewBox="0 0 534.4 981.239">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_121" data-name="Rectángulo 121" width="534.4" height="981.239" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectángulo_120" data-name="Rectángulo 120" width="123.283" height="57.848" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Trazado_150" data-name="Trazado 150" d="M233.587,248.22c0,15.975-27.6,28.924-61.642,28.924S110.3,264.2,110.3,248.22,137.9,219.3,171.945,219.3s61.642,12.951,61.642,28.924" transform="translate(-110.304 -219.296)" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="1.066" gradientTransform="matrix(0.469, 0, 0, -0.469, -0.9, 14.366)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#423cb5"/>
+      <stop offset="0.081" stop-color="#6763c3"/>
+      <stop offset="0.182" stop-color="#8f8cd3"/>
+      <stop offset="0.289" stop-color="#b2afe0"/>
+      <stop offset="0.401" stop-color="#cecceb"/>
+      <stop offset="0.52" stop-color="#e3e2f4"/>
+      <stop offset="0.65" stop-color="#f3f2fa"/>
+      <stop offset="0.797" stop-color="#fcfcfd"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+  </defs>
+  <g id="Grupo_260" data-name="Grupo 260" clip-path="url(#clip-path)">
+    <g id="Grupo_259" data-name="Grupo 259" transform="translate(209.058 415.63)" style="mix-blend-mode: multiply;isolation: isolate">
+      <g id="Grupo_258" data-name="Grupo 258" transform="translate(595 -337)">
+        <g id="Grupo_257" data-name="Grupo 257" clip-path="url(#clip-path-2)">
+          <g id="Grupo_256" data-name="Grupo 256" transform="translate(0 0)">
+            <g id="Grupo_255" data-name="Grupo 255" clip-path="url(#clip-path-3)">
+              <rect id="Rectángulo_119" data-name="Rectángulo 119" width="123.283" height="57.848" transform="translate(0 0)" fill="url(#radial-gradient)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="Trazado_151" data-name="Trazado 151" d="M204.019,249.851H120.247a2.618,2.618,0,0,1-2.617-2.617V228.707a2.618,2.618,0,0,1,2.617-2.617h83.772a2.617,2.617,0,0,1,2.617,2.617v18.526a2.617,2.617,0,0,1-2.617,2.617" transform="translate(105.313 202.416)" fill="#fff"/>
+  </g>
+</svg>

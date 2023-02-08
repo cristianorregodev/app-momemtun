@@ -1,38 +1,49 @@
 button {
-    display: inline-block;
-    background-color: $firstColor;
-    color: $textWhite;
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin: 1.7rem 2rem;
-    padding: 1.7rem 3rem;
-    width: 20rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px 0 rgb(48 48 48 / 59%);
-    transition: box-shadow .5s;
-    @include tablet {
-        font-size: 2rem;
-        width: 25rem;
-    }
-}
+  display: inline-block;
 
-button:hover {
+  color: $textWhite;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 1.7rem 2rem;
+  padding: 1.7rem 3rem;
+  width: 20rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  &.buttonLogin {
+    box-shadow: 0px 4px 4px 0 rgb(48 48 48 / 59%);
+    transition: box-shadow 0.5s;
     background: linear-gradient(0deg, $firstColor 25%, $secondColor 98%);
-    
+    &:hover {
+      background: rgb(199, 167, 248);
+      background: linear-gradient(
+        290deg,
+        rgba(199, 167, 248, 1) 0%,
+        rgba(150, 126, 202, 1) 10%,
+        rgba(141, 118, 193, 1) 20%,
+        rgba(125, 105, 179, 1) 55%,
+        rgba(76, 64, 132, 1) 100%
+      );
+    }
+  }
+
+  @include tablet {
+    font-size: 2rem;
+    width: 25rem;
+  }
 }
 
 .buttonRegister {
-    background-color: $textWhite;
-    color: $textBlack;
-    font-weight: 100;
+  background-color: $textWhite;
+  color: $textBlack;
+  font-weight: 100;
 
-    @include tablet {
-        font-weight: 600;
-    }
+  @include tablet {
+    font-weight: 600;
+  }
 }
 
 .buttonRegister:hover {
-    background: linear-gradient(0deg, $thirdColor 25%, $secondColor 98%);
+  background: #ae80f5;
+  color: $textWhite;
 }
