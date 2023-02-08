@@ -1,30 +1,51 @@
 import React from 'react'
-import { Button } from '../js/components/Button'
 import imageProfile from '../assets/img/imageProfile.webp'
-import { Link } from 'react-router-dom';
-export const Profile = () => {
-    return (
-        <div className='container__login'>
-            <header>
-                <div>
-                    <h2>Hola,
-                        <span>Nombre</span>
-                    </h2>
-                    <img src={imageProfile} alt='imageProfile'></img>
-                    <h1>
-                        Perfil
-                        <span>Nombre</span>
-                    </h1>
-                </div>
+import { IconText, IconImage, IconCode } from '../assets/icons'
 
-                <input name='nameUser' type="text" value='Nombre' readOnly/>
-                <input name='email' type="text" value='Correo' readOnly/>
-                <input name='email' type="text" value='Contacto' readOnly/>
-            </header>
-            <div className='container__button'>
-                <Button text={'Ingresar'}></Button>
+
+import { MdOutlineAccountCircle } from 'react-icons/md';
+import { AiOutlineWhatsApp } from 'react-icons/ai';
+import { HiOutlineMail, } from 'react-icons/hi';
+export const Profile = () => {
+
+    return (
+        <section className='container__profile'>
+            <div className='container__header-profile'>
+                <h2>Hola,<strong> Nombre</strong>
+                </h2>
+                <div className='container__user'>
+                    <div>
+                        <img src={imageProfile} alt='imageProfile'></img>
+                    </div>
+                    <div>
+                        <h3>
+                            Perfil
+                        </h3>
+                        <p>Nombre</p>
+                    </div>
+                </div>
+                <div className='container__data'>
+                <p> <span><MdOutlineAccountCircle size={20} /></span> Nombre</p>
+                <p> <HiOutlineMail size={20} /> Correo</p>
+                <p> <AiOutlineWhatsApp size={20} /> Contacto</p>
             </div>
-            <a href="#"><p>Necesitas Ayuda?</p></a>
-        </div>
+            </div>
+            
+
+            <div className='container__buttons'>
+                <h4>Que deseas hacer</h4>
+                <a href="#">
+                    <img src={IconText} alt="Icon" />
+                </a>
+                <a href="#">
+                    <img src={IconImage} alt="Icon" />
+
+                </a>
+                <a href="#">
+                    <img className='code'src={IconCode} alt="Icon" />
+                </a>
+            </div>
+
+        </section>
     )
 }

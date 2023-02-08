@@ -1,4 +1,4 @@
-.container__home {
+section.container__home {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,7 @@
     height: 100vh;
     padding-top: 8rem;
 
-    header {
+    div.container__img {
         text-align: center;
 
         img {
@@ -29,7 +29,7 @@
 
     }
 
-    .container__button {
+    div.container__button {
         display: flex;
         flex-direction: column;
     }
@@ -37,15 +37,15 @@
     @include tablet {
         background-image: url('/src/assets/img/backgroundHomeD.webp');
         background-repeat: no-repeat;
-        background-position: center 130%;
+        background-position: center 100%;
         align-items: normal;
-        header{
+        div.container__img{
             h1{
                 font-size: 4.5rem;
             }
         }
         
-        .container__button {
+        div.container__button {
             flex-direction: row;
             justify-content: space-evenly;
             margin-bottom: 3rem;

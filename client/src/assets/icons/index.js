@@ -6,6 +6,9 @@ import TextIconTransparent from './text_icon_transparent.svg'
 import ImageIconTransparent from './image_icon_transparent.svg'
 import CodeIconTransparent from './code_icon_transparent.svg'
 import HomeIconTransparent from './home_icon_transparent.svg'
+import IconText from './iconText.webp'
+import IconImage from './iconImage.webp'
+import IconCode from './iconCode.webp'
 
 export {
   IconTextPurple,
@@ -16,4 +19,7 @@ export {
   ImageIconTransparent,
   CodeIconTransparent,
   HomeIconTransparent,
+  IconText,
+  IconImage,
+  IconCode  
 }
