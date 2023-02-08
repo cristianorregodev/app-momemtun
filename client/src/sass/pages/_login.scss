@@ -1,0 +1,102 @@
+section.container__login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/src/assets/img/backgroundHomeM.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 4rem;
+
+    div.container__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        span {
+            position: absolute;
+            font-size: 3rem;
+            top: 66px;
+            left: 32px;
+        }
+
+        input {
+            padding: 0.7rem 2rem;
+            border-radius: 0.5rem;
+            border-color: $textWhite;
+            width: 30rem;
+            outline: none;
+        }
+
+        input:focus {
+            border: 2px solid $firstColor;
+        }
+
+        ::placeholder {
+            font-weight: 600;
+            color: $firstColor;
+            opacity: 1;
+        }
+
+        .forget__password {
+            font-size: 1.2rem;
+            color: $textWhite;
+            margin: 0;
+        }
+
+    }
+
+    div.container__button {
+        margin-top: 12rem;
+    }
+
+    @include tablet {
+        background-image: url('/src/assets/img/backgroundHomeD.webp');
+        background-repeat: no-repeat;
+        background-position: center 95%;
+
+        div.container__header {
+            gap: 3.7rem;
+
+            img {
+                width: 10rem;
+            }
+
+            h1 {
+                display: none;
+            }
+
+            .forget__password {
+                font-size: 1.7rem;
+            }
+
+            input {
+                padding: 1rem 2rem;
+                width: 30rem;
+
+            }
+        }
+
+        div.container__button {
+            margin: 0;
+        }
+
+        P {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+    }
+}
