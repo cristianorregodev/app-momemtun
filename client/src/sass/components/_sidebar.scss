@@ -7,7 +7,7 @@ header.sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 20%;
+    row-gap: 14%;
     background: rgb(199, 167, 248);
     background: linear-gradient(
       29deg,
@@ -40,7 +40,7 @@ header.sidebar {
       a {
         display: flex;
         align-items: center;
-        column-gap: 3rem;
+        column-gap: 5rem;
         color: $textWhite;
         font-weight: bold;
         img {
