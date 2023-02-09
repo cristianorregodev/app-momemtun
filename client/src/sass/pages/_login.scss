@@ -13,7 +13,7 @@ section.container__login {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 
     div {
       display: flex;
@@ -25,13 +25,20 @@ section.container__login {
       margin: 0;
     }
 
-    span {
+    strong.icon__arrow {
       position: absolute;
       font-size: 3rem;
       top: 66px;
       left: 32px;
     }
-
+  .message__error{
+    padding: .5rem .9rem;
+    border-radius:1rem;
+    box-shadow:0 0 15px 5px $firstColor;
+    background-color: #f7a7a3;
+    font-size: 1.1rem;
+  }
+  
     input {
       padding: 0.7rem 2rem;
       border-radius: 0.5rem;
@@ -69,8 +76,7 @@ section.container__login {
     background-position: center 95%;
 
     div.container__header {
-      margin-top: 8rem;
-      gap: 3.7rem;
+      margin-top: 2rem;
 
       img {
         width: 10rem;
@@ -87,6 +93,10 @@ section.container__login {
       input {
         padding: 1rem 2rem;
         width: 30rem;
+      }
+      .message__error{
+        padding: .5rem .5rem;
+        font-size: 1.3rem;
       }
     }
 
