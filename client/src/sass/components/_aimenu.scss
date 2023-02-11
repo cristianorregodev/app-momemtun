@@ -1,14 +1,34 @@
-nav.ai_menu {
-  display: flex;
-  justify-content: space-between;
-  a {
-    padding: 0.6rem 3rem;
-    border-radius: 0.3rem;
-    color: $textBlack;
-    transition: all 0.5s ease;
-    background: $textWhite;
-    font-size: 1.4rem;
-    &:hover {
+div.ai_menu_container {
+  h1 {
+    font-size: 1.8rem;
+    font-family: $font;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  nav.ai_menu {
+    display: flex;
+    justify-content: space-between;
+    a {
+      padding: 0.6rem 3rem;
+      border-radius: 0.3rem;
+      color: $textBlack;
+      transition: all 0.5s ease;
+      background: $textWhite;
+      font-size: 1.4rem;
+      &:hover {
+        color: $textWhite;
+        background: rgb(174, 128, 245);
+        background: linear-gradient(
+          90deg,
+          rgba(174, 128, 245, 1) 0%,
+          rgba(153, 116, 236, 1) 34%,
+          rgba(97, 83, 211, 1) 100%
+        );
+      }
+    }
+
+    &.active {
       color: $textWhite;
       background: rgb(174, 128, 245);
       background: linear-gradient(
@@ -19,15 +39,16 @@ nav.ai_menu {
       );
     }
   }
-
-  &.active {
-    color: $textWhite;
-    background: rgb(174, 128, 245);
-    background: linear-gradient(
-      90deg,
-      rgba(174, 128, 245, 1) 0%,
-      rgba(153, 116, 236, 1) 34%,
-      rgba(97, 83, 211, 1) 100%
-    );
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav.ai_menu {
+      width: 50%;
+    }
+    h1 {
+      margin-bottom: 0;
+      font-size: 3rem;
+    }
   }
 }
