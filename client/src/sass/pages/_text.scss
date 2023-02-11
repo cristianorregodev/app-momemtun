@@ -5,6 +5,10 @@ section.text_completion_section {
   height: 100vh;
   padding: 6rem 1rem;
 
+  @include desktop {
+    background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');
+    background-position: center;
+  }
   form {
     width: 100%;
     margin: 0 auto;
@@ -23,6 +27,7 @@ section.text_completion_section {
       border-radius: 0.4rem;
       border: none;
       padding: 1rem;
+      font-family: $font;
 
       &::placeholder {
         font-family: 'Font Awesome 5 Free';

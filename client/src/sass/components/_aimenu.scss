@@ -44,7 +44,11 @@ div.ai_menu_container {
     justify-content: space-between;
     align-items: center;
     nav.ai_menu {
-      width: 50%;
+      width: 40%;
+      a {
+        padding: 0.8rem 3.4rem;
+        font-weight: 600;
+      }
     }
     h1 {
       margin-bottom: 0;

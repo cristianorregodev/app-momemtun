@@ -1,0 +1,96 @@
+section.code_generation_section {
+  background-image: url('/src/assets/img/code_background.webp');
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  padding: 6rem 1rem;
+  @include tablet {
+    background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');
+    background-position: center 1005;
+    height: 100vh;
+  }
+  .code {
+    margin: 5rem auto;
+    .code_header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2rem auto;
+
+      p {
+        text-align: left;
+        color: $textWhite;
+      }
+      div {
+        display: flex;
+        column-gap: 1rem;
+        button {
+          margin: 0;
+          padding: 0.8rem;
+          width: auto;
+          font-size: 1.4rem;
+          font-weight: 400;
+          background: #dbd9e6;
+          color: $firstColor;
+        }
+      }
+    }
+    .code_content {
+      width: 100%;
+      min-height: 25rem;
+      @include tablet {
+        min-height: 30rem;
+      }
+      background-color: $textWhite;
+      border-radius: 0.6rem;
+    }
+  }
+  form {
+    width: 100%;
+    margin: 0 auto;
+
+    .input_code {
+      background-color: $textWhite;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 0.6rem;
+      textarea {
+        width: 80%;
+        border: none;
+        resize: none;
+        height: 4rem;
+        font-family: $font;
+        color: $firstColor;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-family: $font;
+          font-size: 1.8rem;
+          padding-top: 0.6rem;
+          color: #cccccc;
+        }
+      }
+      button.code_button {
+        width: auto;
+        margin: 0;
+        padding: 1rem 1.2rem;
+        border-radius: 0.9rem;
+        background-color: #7f6adb;
+        font-weight: 400;
+        display: flex;
+        svg {
+          transition: all 0.3s ease;
+        }
+        &:hover {
+          svg {
+            transform: translateX(0.4rem);
+          }
+        }
+      }
+    }
+  }
+}
