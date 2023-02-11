@@ -1,11 +1,13 @@
 nav.ai_menu {
   display: flex;
-  column-gap: 2.4rem;
+  justify-content: space-between;
   a {
-    padding: 0.6rem 2.6rem;
+    padding: 0.6rem 3rem;
     border-radius: 0.3rem;
     color: $textBlack;
     transition: all 0.5s ease;
+    background: $textWhite;
+    font-size: 1.4rem;
     &:hover {
       color: $textWhite;
       background: rgb(174, 128, 245);

@@ -9,6 +9,7 @@ import HomeIconTransparent from './home_icon_transparent.svg'
 import IconText from './text_icon_purple_t.svg'
 import IconImage from './image_icon_purple_t.svg'
 import IconCode from './code_icon_purple_t.svg'
+import PlusIcon from './plus_icon.svg'
 
 export {
   IconTextPurple,
@@ -22,4 +23,5 @@ export {
   IconText,
   IconImage,
   IconCode,
+  PlusIcon,
 }
