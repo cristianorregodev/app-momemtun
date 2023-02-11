@@ -1,0 +1,57 @@
+section.image_generation_section {
+  background-image: url('/src/assets/img/text_background.webp');
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+  padding: 6rem 1rem;
+  @include tablet {
+    background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');
+    background-position: center;
+    height: 100vh;
+  }
+
+  form {
+    margin: 4rem auto;
+    p {
+      color: $textWhite;
+      text-align: left;
+    }
+    .input_image {
+      background-color: $textWhite;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 0.6rem;
+      textarea {
+        width: 65%;
+        border: none;
+        resize: none;
+        height: 4rem;
+        &:focus {
+          outline: none;
+        }
+      }
+      button.image_button {
+        width: auto;
+        margin: 0;
+        padding: 1rem 1.8rem;
+        border-radius: 0.9rem;
+        background-color: $firstColor;
+        font-weight: 400;
+      }
+    }
+  }
+  .image_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    gap: 2rem;
+  }
+}

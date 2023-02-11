@@ -2,6 +2,10 @@ import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Login, Home, Profile, TextCompletion, Welcome, Register, Query } from '../../pages'
 import { GenerateText } from '../../pages/GenerateText'
+import { Login, Home, Profile, TextCompletion, Welcome, Register } from '../../pages'
+import { CodeGeneration } from '../../pages/CodeGeneration'
+import { ImageGeneration } from '../../pages/ImageGeneration'
+import { ImageResult } from '../../pages/ImageResult'
 
 import { Layout } from '../containers/Layout'
 import { AuthContext } from '../Context/AuthContext'
@@ -14,7 +18,7 @@ export const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={!isAuth ? <Home /> : <Navigate to="/profile" />} />
             <Route path="/login" element={!isAuth ? <Login /> : <Navigate to="/" />} />
             <Route path="/register" element={!isAuth ? <Register /> : <Navigate to="/" />} />
             <Route path="/profile" element={isAuth ? <Profile /> : <Navigate to="/" />} />
@@ -25,6 +29,15 @@ export const App = () => {
             />
             <Route path="/query" element={isAuth ? <Query /> : <Navigate to="/" />} />
             <Route path="/generate-text" element={isAuth ? <GenerateText /> : <Navigate to="/" />} />
+            <Route
+              path="/image-generator"
+              element={isAuth ? <ImageGeneration /> : <Navigate to="/" />}
+            />
+            <Route
+              path="/code-generator"
+              element={isAuth ? <CodeGeneration /> : <Navigate to="/" />}
+            />
+            <Route path="/image/:id" element={isAuth ? <ImageResult /> : <Navigate to="/" />} />
           </Routes>
         </Layout>
       </BrowserRouter>
