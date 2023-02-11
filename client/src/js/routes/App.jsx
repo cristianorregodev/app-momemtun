@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Login, Home, Profile, TextCompletion, Welcome, Register, Query } from '../../pages'
 import { GenerateText } from '../../pages/GenerateText'
-import { Login, Home, Profile, TextCompletion, Welcome, Register } from '../../pages'
 import { CodeGeneration } from '../../pages/CodeGeneration'
 import { ImageGeneration } from '../../pages/ImageGeneration'
 import { ImageResult } from '../../pages/ImageResult'
@@ -10,6 +9,7 @@ import { ImageResult } from '../../pages/ImageResult'
 import { Layout } from '../containers/Layout'
 import { AuthContext } from '../Context/AuthContext'
 import useAuth from '../hooks/useAuth'
+import { TextResult } from '../../pages/TextResult'
 
 export const App = () => {
   const [isAuth, activateAuth, removeAuth] = useAuth()
@@ -38,6 +38,7 @@ export const App = () => {
               element={isAuth ? <CodeGeneration /> : <Navigate to="/" />}
             />
             <Route path="/image/:id" element={isAuth ? <ImageResult /> : <Navigate to="/" />} />
+            <Route path="/text-Result" element={isAuth ? <TextResult /> : <Navigate to="/" />} />
           </Routes>
         </Layout>
       </BrowserRouter>

@@ -9,7 +9,7 @@ export const Query = () => {
 
             <div className='container '>
                 <h1>Consultas Realizadas</h1>
-                <div className='container__cards'>
+                <div className='card__container'>
                     <CardQuery name={'Mauro Montoya'} img={imageProfile} date={'21 jun'} action={'Texto'}></CardQuery>
                     <CardQuery name={'Hvmble Abadia'} img={imageProfile} date={'21 jun'} action={'Imágenes'}></CardQuery>
                     <CardQuery name={'Cristian Orrego'} img={imageProfile} date={'21 jun'} action={'Código'}></CardQuery>
