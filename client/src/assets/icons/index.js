@@ -10,6 +10,7 @@ import IconText from './text_icon_purple_t.svg'
 import IconImage from './image_icon_purple_t.svg'
 import IconCode from './code_icon_purple_t.svg'
 import PlusIcon from './plus_icon.svg'
+import ImagePlus from './icon_plus_img.svg'
 
 export {
   IconTextPurple,
@@ -24,4 +25,5 @@ export {
   IconImage,
   IconCode,
   PlusIcon,
+  ImagePlus,
 }
