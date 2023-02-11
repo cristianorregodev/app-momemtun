@@ -5,13 +5,6 @@ section.text_completion_section {
   height: 100vh;
   padding: 6rem 1rem;
 
-  h1 {
-    font-size: 1.8rem;
-    font-family: $font;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
   form {
     width: 100%;
     margin: 0 auto;
@@ -45,11 +38,12 @@ section.text_completion_section {
     }
   }
   button.generate-text {
+    display: block;
     max-width: 40rem;
     width: 100%;
     background-color: $firstColor;
     padding: 1rem 2rem;
-    margin: 0;
+    margin: 0 auto;
     &:hover {
       background-color: $secondColor;
     }
@@ -60,5 +54,30 @@ section.text_completion_section {
     margin-top: 4rem;
     min-height: 25rem;
     border-radius: 0.6rem;
+    padding: 2rem;
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 2px #f2f2f4;
+
+      h2 {
+        color: $firstColor;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+      button {
+        margin: 0;
+        background: none;
+        color: $firstColor;
+        width: auto;
+        padding: 1rem;
+      }
+    }
+    p {
+      width: 100%;
+      text-align: justify;
+    }
   }
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import { AiMenu } from '../js/components/AiMenu'
-import { PlusIcon } from '../assets/icons'
+import { FaRedoAlt } from 'react-icons/fa'
 
 export const TextCompletion = () => {
   return (
     <section className="text_completion_section">
       <div className="container">
-        <h1>Generar texto</h1>
-        <AiMenu />
+        <AiMenu title="Generar texto" />
+
         <form>
           <div className="form-group">
             <label htmlFor="">Instrucción</label>
@@ -19,7 +19,9 @@ export const TextCompletion = () => {
         <div className="text-result">
           <div>
             <h2>Resultado</h2>
-            <button>R</button>
+            <button>
+              <FaRedoAlt />
+            </button>
           </div>
           <p>Lorem ipsum dolor sit amet</p>
         </div>
