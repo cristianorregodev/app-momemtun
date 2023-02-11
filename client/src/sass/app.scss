@@ -9,10 +9,13 @@
 @import 'components/navbar';
 @import 'components/sidebar';
 @import 'components/aimenu';
-
+@import 'components/cardquery';
+@import 'components/cardtext';
 //Pages
 @import 'pages/home';
 @import 'pages/login';
 @import 'pages/profile';
 @import 'pages/welcome';
 @import 'pages/text';
+@import 'pages/query';
+@import 'pages/generatetext';

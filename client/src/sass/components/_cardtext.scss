@@ -1,0 +1,39 @@
+div.container__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: $textWhite;
+    padding: 1rem 2rem 1rem 2rem;
+    margin:2rem 2rem 3rem 2rem;
+    box-shadow: 0 -1px 19px 0 rgb(3 101 172 / 14%);
+    
+    img {
+        margin-top: .2rem;
+        border-radius: 50%;
+    }
+
+    h4,
+    h5 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $firstColor;
+        margin: 0;
+    }
+    h5{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        font-weight: 100;
+    }
+    p{
+        font-size: 1rem;
+        margin: 0;
+        text-align: justify;
+        color: $firstColor;
+    }
+    @include tablet{
+        h4,h5{
+            font-size: 1.5rem;
+        }
+    }
+}

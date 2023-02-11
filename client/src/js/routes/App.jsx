@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Login, Home, Profile, TextCompletion, Welcome, Register } from '../../pages'
+import { Login, Home, Profile, TextCompletion, Welcome, Register, Query } from '../../pages'
+import { GenerateText } from '../../pages/GenerateText'
 
 import { Layout } from '../containers/Layout'
 import { AuthContext } from '../Context/AuthContext'
@@ -22,6 +23,8 @@ export const App = () => {
               path="/text-generator"
               element={isAuth ? <TextCompletion /> : <Navigate to="/" />}
             />
+            <Route path="/query" element={isAuth ? <Query /> : <Navigate to="/" />} />
+            <Route path="/generate-text" element={isAuth ? <GenerateText /> : <Navigate to="/" />} />
           </Routes>
         </Layout>
       </BrowserRouter>
