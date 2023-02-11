@@ -10,7 +10,7 @@ export const Login = () => {
   const { isAuth, activateAuth } = useContext(AuthContext)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
   const navigate = useNavigate()
 
   const userLogin = async (evt) => {
@@ -32,7 +32,7 @@ export const Login = () => {
       <form onSubmit={userLogin}>
         <div className="container__header">
           <Link to="/">
-            <strong className='icon__arrow'>
+            <strong className="icon__arrow">
               <MdOutlineKeyboardArrowLeft color={'white'} />
             </strong>
           </Link>
@@ -44,16 +44,18 @@ export const Login = () => {
             type="email"
             placeholder="Correo electrónico"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <input
             name="password"
             type="password"
             placeholder="Contraseña"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          {error &&
-            <span className='message__error'>El usuario y/ó contraseña es incorrecto.</span>
-          }
+          {error && (
+            <span className="message__error">El usuario y/ó contraseña es incorrecto.</span>
+          )}
 
           <a href="#">
             <p className="forget__password">Olvidaste tu contraseña?</p>

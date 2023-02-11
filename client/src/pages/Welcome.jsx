@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { IconCodePurple, IconImagePurple, IconTextPurple } from '../assets/icons'
 export const Welcome = () => {
   return (
@@ -12,10 +13,10 @@ export const Welcome = () => {
         <span>Lorem, ipsum dolor sit.</span>
       </div>
       <div className="welcome_buttons container">
-        <a href="#">
+        <Link to="/text-generator">
           <img src={IconTextPurple} alt="Icon" />
           <span>Generar y editar texto</span>
-        </a>
+        </Link>
         <a href="#">
           <img src={IconImagePurple} alt="Icon" />
           <span>Generación de imágenes</span>
