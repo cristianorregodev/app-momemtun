@@ -9,6 +9,8 @@
 @import 'components/navbar';
 @import 'components/sidebar';
 @import 'components/aimenu';
+@import 'components/cardquery';
+@import 'components/cardtext';
 @import 'components/loader';
 
 //Pages
@@ -17,6 +19,9 @@
 @import 'pages/profile';
 @import 'pages/welcome';
 @import 'pages/text';
+@import 'pages/query';
+@import 'pages/generatetext';
 @import 'pages/image';
 @import 'pages/code';
 @import 'pages/imageResult';
+@import 'pages/textresult';
