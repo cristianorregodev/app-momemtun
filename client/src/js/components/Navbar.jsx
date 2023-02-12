@@ -19,18 +19,18 @@ export const Navbar = () => {
         <Link to="/profile" onClick={showNavBar}>
           Perfil
         </Link>
-        <Link to="/" onClick={showNavBar}>
+        <Link to="/welcome" onClick={showNavBar}>
           Inicio
         </Link>
         <Link to="/text-generator" onClick={showNavBar}>
           Texto
         </Link>
-        <a href="#" onClick={showNavBar}>
+        <Link to="/image-generator" onClick={showNavBar}>
           Imágenes
-        </a>
-        <a href="#" onClick={showNavBar}>
+        </Link>
+        <Link to="/code-generator" onClick={showNavBar}>
           Código
-        </a>
+        </Link>
         <button className="nav_close_btn" onClick={showNavBar}>
           <FaTimes />
         </button>

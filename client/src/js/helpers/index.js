@@ -6,3 +6,8 @@ export const completionOptions = {
   frequency_penalty: 0.0,
   presence_penalty: 0.0,
 }
+
+export const imageOptions = {
+  n: 8,
+  size: '1024x1024',
+}

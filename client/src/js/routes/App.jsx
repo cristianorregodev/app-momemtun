@@ -1,15 +1,23 @@
 import React, { useContext } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Login, Home, Profile, TextCompletion, Welcome, Register, Query } from '../../pages'
-import { GenerateText } from '../../pages/GenerateText'
-import { CodeGeneration } from '../../pages/CodeGeneration'
-import { ImageGeneration } from '../../pages/ImageGeneration'
-import { ImageResult } from '../../pages/ImageResult'
+import {
+  Login,
+  Home,
+  Profile,
+  TextGeneration,
+  Welcome,
+  Register,
+  History,
+  ImageGeneration,
+  CodeGeneration,
+  CodeResult,
+  TextResult,
+  ImageResult,
+} from '../../pages'
 
 import { Layout } from '../containers/Layout'
 import { AuthContext } from '../Context/AuthContext'
 import useAuth from '../hooks/useAuth'
-import { TextResult } from '../../pages/TextResult'
 
 export const App = () => {
   const [isAuth, activateAuth, removeAuth] = useAuth()
@@ -25,10 +33,9 @@ export const App = () => {
             <Route path="/welcome" element={isAuth ? <Welcome /> : <Navigate to="/" />} />
             <Route
               path="/text-generator"
-              element={isAuth ? <TextCompletion /> : <Navigate to="/" />}
+              element={isAuth ? <TextGeneration /> : <Navigate to="/" />}
             />
-            <Route path="/query" element={isAuth ? <Query /> : <Navigate to="/" />} />
-            <Route path="/generate-text" element={isAuth ? <GenerateText /> : <Navigate to="/" />} />
+
             <Route
               path="/image-generator"
               element={isAuth ? <ImageGeneration /> : <Navigate to="/" />}
@@ -37,8 +44,10 @@ export const App = () => {
               path="/code-generator"
               element={isAuth ? <CodeGeneration /> : <Navigate to="/" />}
             />
+            <Route path="/history" element={isAuth ? <History /> : <Navigate to="/" />} />
             <Route path="/image/:id" element={isAuth ? <ImageResult /> : <Navigate to="/" />} />
-            <Route path="/text-Result" element={isAuth ? <TextResult /> : <Navigate to="/" />} />
+            <Route path="/code/:id" element={isAuth ? <CodeResult /> : <Navigate to="/" />} />
+            <Route path="/text/:id" element={isAuth ? <TextResult /> : <Navigate to="/" />} />
           </Routes>
         </Layout>
       </BrowserRouter>

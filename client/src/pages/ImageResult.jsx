@@ -8,7 +8,7 @@ export const ImageResult = () => {
     <section className="image_result_section">
       <div className="container">
         <AiMenu title="Resultado imágenes" />
-        <p>Image #1</p>
+        <h2>Image #1</h2>
         <div className="image_container">
           <div className="image">
             <img

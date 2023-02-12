@@ -1,30 +1,26 @@
 import React from 'react'
 import { AiMenu } from '../js/components/AiMenu'
-
-import { ImagePlus } from '../assets/icons'
+import { TextCard } from '../js/components/TextCard'
+import imageProfile from '../assets/img/imageProfilePurple.webp'
 export const TextResult = () => {
-    return (
-        <section className="container__result-text">
-            <div className="container container__data">
-                <AiMenu title="Resultado Código" />
-                <p>Code Javascript Sanbox</p>
-                <div className="container__text">
-                    <div>
-                        {/* <p>Texto</p> */}
-                    </div>
-                </div>
-                <div className="container__footer">
-                        <div className="date">
-                            <span>Fecha</span>
-                            <p>Hoy</p>
-                        </div>
-                        <div className="likes">
-                            <span>Puntuación</span>
-                            <p>Tanto</p>
-                        </div>
-                    </div>
-                <button className="goback">Regresar</button>
-            </div>
-        </section>
-    )
+  return (
+    <section className="container__generate-text">
+      <div className=" container ">
+        <AiMenu title="Resultados texto" />
+        <h2>Generador de Texto</h2>
+        <div className="card__container">
+          <TextCard
+            img={imageProfile}
+            date={'21 de junio'}
+            text={
+              'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+            }
+          />
+        </div>
+        <div>
+          <button className="goback">Regresar</button>
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -22,14 +22,14 @@ export const Sidebar = () => {
           <img src={TextIconTransparent} alt="Icon" />
           Texto
         </Link>
-        <a href="#" className="disabled">
+        <Link to="/image-generator" className="disabled">
           <img src={ImageIconTransparent} alt="Icon" />
           Imágenes
-        </a>
-        <a href="#" className="disabled">
+        </Link>
+        <Link to="/code-generator" className="disabled">
           <img src={CodeIconTransparent} alt="Icon" />
           Código
-        </a>
+        </Link>
       </nav>
     </header>
   )

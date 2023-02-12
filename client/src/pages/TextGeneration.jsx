@@ -6,12 +6,13 @@ import { AiMenu } from '../js/components/AiMenu'
 import { Loader } from '../js/components/Loader'
 import { completionOptions } from '../js/helpers'
 
-export const TextCompletion = () => {
+export const TextGeneration = () => {
   const [prompt, setPrompt] = useState('')
   const [result, setResult] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const configuration = new Configuration({
-    apiKey: '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',
+    organization: 'org-cymoLVEgmRV50QSgzXceB5Bu',
+    apiKey: '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',
   })
   const openai = new OpenAIApi(configuration)
 

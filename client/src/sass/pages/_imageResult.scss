@@ -5,16 +5,12 @@ section.image_result_section {
   height: 100%;
   padding: 6rem 1rem 3rem;
 
-  @include desktop {
-    background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');
-    background-position: center;
-    height: 100vh;
-  }
-
-  p {
+  h2 {
     color: $textWhite;
     text-align: left;
-    margin-top: 4rem;
+    margin: 4rem 0;
+    font-weight: 400;
+    font-size: 1.6rem;
   }
 
   .image_container {
@@ -75,6 +71,9 @@ section.image_result_section {
     margin: 4rem auto 1rem;
     box-shadow: 0px 4px 4px 0 rgb(48 48 48 / 59%);
     transition: box-shadow 0.5s;
+    padding: 0.7rem 2rem;
+    font-size: 1.7rem;
+
     background: linear-gradient(270deg, $firstColor 25%, $secondColor 98%);
     &:hover {
       background: rgb(199, 167, 248);
@@ -86,6 +85,17 @@ section.image_result_section {
         rgba(125, 105, 179, 1) 55%,
         rgba(76, 64, 132, 1) 100%
       );
+    }
+  }
+  @include desktop {
+    background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');
+    background-position: center;
+    height: 100vh;
+    h2 {
+      font-size: 2.4rem;
+      text-align: center;
+      color: $textWhite;
+      margin: 6rem;
     }
   }
 }

@@ -1,0 +1,35 @@
+section.container__query {
+  background-image: url('/src/assets/img/text_background.webp');
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+  padding: 6rem 1rem;
+  @include tablet {
+    background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');
+    background-position: center 100%;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 1.8rem;
+    font-family: $font;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .card__container {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  @include tablet {
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    .card__container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+}
