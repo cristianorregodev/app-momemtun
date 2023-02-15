@@ -1,40 +1,45 @@
-import React from 'react'
-import imageProfile from '../assets/img/imageProfile.webp'
-import { IconText, IconImage, IconCode } from '../assets/icons'
-
+import React, { useContext } from 'react'
 import { FaUser, FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
+
+import { AuthContext } from '../js/Context/AuthContext'
+import { IconText, IconImage, IconCode } from '../assets/icons'
+import { Link } from 'react-router-dom'
+
 export const Profile = () => {
+  const { isAuth, avatar } = useContext(AuthContext)
+  const { user } = isAuth
+
   return (
     <section className="container__profile">
       <div className="container wrapper">
         <div className="container__header-profile">
           <h2>
-            Hola,<strong> Nombre</strong>
+            Hola,<strong> {user.username}</strong>
           </h2>
           <div className="container__user">
             <div>
-              <img src={imageProfile} alt="imageProfile"></img>
+              <img src={avatar} alt="imageProfile" style={{ width: '80px' }} />
             </div>
             <div className="profile__name">
               <h3>Perfil</h3>
-              <p>Nombre</p>
+              <p>{user.username}</p>
             </div>
           </div>
           <div className="container__data">
             <p>
               {' '}
               <FaUser size={20} />
-              <span>Nombre</span>{' '}
+              <span>{user.username}</span>{' '}
             </p>
             <p>
               {' '}
               <FaRegEnvelope size={20} />
-              <span>Correo</span>
+              <span>{user.email}</span>
             </p>
             <p>
               {' '}
               <FaWhatsapp size={20} />
-              <span>Contacto</span>
+              <span>{user.contact_number}</span>
             </p>
           </div>
         </div>
@@ -42,15 +47,15 @@ export const Profile = () => {
         <div className="container__buttons ">
           <h4>Que deseas hacer</h4>
           <div>
-            <a href="#">
+            <Link to="/text-generator">
               <img src={IconText} alt="Icon" /> Texto
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/image-generator">
               <img src={IconImage} alt="Icon" /> Imágenes
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/code-generator">
               <img className="code" src={IconCode} alt="Icon" /> Código
-            </a>
+            </Link>
           </div>
         </div>
       </div>

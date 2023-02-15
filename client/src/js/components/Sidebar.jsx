@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+
+import { AuthContext } from '../Context/AuthContext'
 import {
   HomeIconTransparent,
   TextIconTransparent,
@@ -8,10 +10,11 @@ import {
 } from '../../assets/icons'
 
 export const Sidebar = () => {
+  const { avatar } = useContext(AuthContext)
   return (
     <header className="sidebar">
       <Link to="/profile" className="user_photo">
-        <img src={HomeIconTransparent} alt="" />
+        <img src={avatar} alt="avatar" />
       </Link>
       <nav>
         <Link to="/welcome">

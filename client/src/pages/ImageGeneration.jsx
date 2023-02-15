@@ -5,14 +5,15 @@ import { AiMenu } from '../js/components/AiMenu'
 import { Loader } from '../js/components/Loader'
 import { ImagePlaceholder } from '../assets/img'
 import { imageOptions } from '../js/helpers'
+import { API_KEY, ORGANIZATION_ID } from '../js/config'
 
 export const ImageGeneration = () => {
   const [prompt, setPrompt] = useState('')
   const [result, setResult] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const configuration = new Configuration({
-    organization: 'org-cymoLVEgmRV50QSgzXceB5Bu',
-    apiKey: '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',
+    organization: ORGANIZATION_ID,
+    apiKey: API_KEY,
   })
   const openai = new OpenAIApi(configuration)
   const handleSubmit = async (evt) => {

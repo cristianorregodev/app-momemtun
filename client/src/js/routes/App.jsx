@@ -20,9 +20,9 @@ import { AuthContext } from '../Context/AuthContext'
 import useAuth from '../hooks/useAuth'
 
 export const App = () => {
-  const [isAuth, activateAuth, removeAuth] = useAuth()
+  const [isAuth, activateAuth, removeAuth, avatar, generateAvatar] = useAuth()
   return (
-    <AuthContext.Provider value={{ isAuth, activateAuth, removeAuth }}>
+    <AuthContext.Provider value={{ isAuth, activateAuth, removeAuth, avatar, generateAvatar }}>
       <BrowserRouter>
         <Layout>
           <Routes>

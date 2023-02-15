@@ -1,6 +1,9 @@
 import { useState } from 'react'
 
 const useAuth = () => {
+  const [avatar, setAvatar] = useState(
+    'https://www.pinclipart.com/picdir/middle/148-1486972_mystery-man-avatar-circle-clipart.png'
+  )
   const [isAuth, setIsAuth] = useState(() => {
     const user = window.sessionStorage.getItem('userAuth')
     return JSON.parse(user)
@@ -12,12 +15,17 @@ const useAuth = () => {
 
     setIsAuth(JSON.parse(user))
   }
+
   const removeAuth = () => {
     window.sessionStorage.removeItem('userAuth')
     setIsAuth(false)
   }
 
-  return [isAuth, activateAuth, removeAuth]
+  const generateAvatar = (url) => {
+    setAvatar(url)
+  }
+
+  return [isAuth, activateAuth, removeAuth, avatar, generateAvatar]
 }
 
 export default useAuth
