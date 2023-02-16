@@ -45,7 +45,7 @@ export const App = () => {
               element={isAuth ? <CodeGeneration /> : <Navigate to="/" />}
             />
             <Route path="/history" element={isAuth ? <History /> : <Navigate to="/" />} />
-            <Route path="/image/:id" element={isAuth ? <ImageResult /> : <Navigate to="/" />} />
+            <Route path="/images/:id" element={isAuth ? <ImageResult /> : <Navigate to="/" />} />
             <Route path="/code/:id" element={isAuth ? <CodeResult /> : <Navigate to="/" />} />
             <Route path="/text/:id" element={isAuth ? <TextResult /> : <Navigate to="/" />} />
           </Routes>

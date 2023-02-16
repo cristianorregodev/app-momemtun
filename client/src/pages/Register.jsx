@@ -75,7 +75,7 @@ export const Register = () => {
           <input
             name="password"
             type="password"
-            placeholder="Contraseña"
+            placeholder="Mínimo 6 caracteres"
             onChange={(e) => setPassword(e.target.value)}
             required
           />

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { FaUser, FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
+import { FaUser, FaRegEnvelope, FaWhatsapp, FaArrowRight } from 'react-icons/fa'
 
 import { AuthContext } from '../js/Context/AuthContext'
 import { IconText, IconImage, IconCode } from '../assets/icons'
@@ -57,6 +57,15 @@ export const Profile = () => {
               <img className="code" src={IconCode} alt="Icon" /> Código
             </Link>
           </div>
+        </div>
+
+        <div className="history_button">
+          <Link to="/history" className="btn_history">
+            Consultas realizadas{' '}
+            <span>
+              <FaArrowRight />
+            </span>
+          </Link>
         </div>
       </div>
     </section>

@@ -5,5 +5,5 @@ export const getData = async (url, token) => {
   })
 
   const data = await resp.json()
-  return data.data
+  return data
 }

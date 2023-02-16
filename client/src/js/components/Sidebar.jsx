@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { FaHistory } from 'react-icons/fa'
 
 import { AuthContext } from '../Context/AuthContext'
 import {
@@ -32,6 +33,12 @@ export const Sidebar = () => {
         <Link to="/code-generator" className="disabled">
           <img src={CodeIconTransparent} alt="Icon" />
           Código
+        </Link>
+        <Link to="/history">
+          <span>
+            <FaHistory />
+          </span>
+          Historial
         </Link>
       </nav>
     </header>

@@ -1,8 +1,8 @@
 import { createAvatar } from '@dicebear/core'
-import { funEmoji } from '@dicebear/collection'
+import { botttsNeutral } from '@dicebear/collection'
 
 export const newAvatar = (username) => {
-  const avatar = createAvatar(funEmoji, {
+  const avatar = createAvatar(botttsNeutral, {
     seed: username,
   }).toDataUriSync()
   return avatar

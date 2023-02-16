@@ -28,8 +28,10 @@ export const ImageGeneration = () => {
     const response = await openai.createImage(object)
     setResult(response.data.data.map((image) => image.url))
     setIsLoading(false)
-    const body = { prompt, answer: result, category: 'Imágenes' }
-    saveApiAnswer(url, isAuth.token, body)
+    const body = { prompt, answer: result, category: 'images' }
+    setTimeout(() => {
+      saveApiAnswer(url, isAuth.token, body)
+    }, 2000)
   }
   return (
     <section className="image_generation_section">

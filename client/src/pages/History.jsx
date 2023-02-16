@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from 'react'
 
 import { AuthContext } from '../js/Context/AuthContext'
 import { HistoryCard } from '../js/components/HistoryCard'
-import imageProfile from '../assets/img/imageProfilePurple.webp'
 import { BACKEND_API_URL } from '../js/config'
 import { getData } from '../js/helpers/getData'
 
@@ -11,7 +10,7 @@ export const History = () => {
   const [data, setData] = useState([])
   const url = `${BACKEND_API_URL}/all`
   useEffect(() => {
-    getData(url, isAuth.token).then((data) => setData(data))
+    getData(url, isAuth.token).then((data) => setData(data.data))
   }, [])
   return (
     <section className="container__query">

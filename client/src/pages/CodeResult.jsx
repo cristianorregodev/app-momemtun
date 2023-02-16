@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { AiMenu } from '../js/components/AiMenu'
 
 export const CodeResult = () => {
@@ -22,7 +23,9 @@ export const CodeResult = () => {
             <p>Tanto</p>
           </div>
         </div>
-        <button className="goback">Regresar</button>
+        <Link to="/history" className="goback">
+          Regresar
+        </Link>
       </div>
     </section>
   )

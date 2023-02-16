@@ -31,6 +31,9 @@ export const Navbar = () => {
         <Link to="/code-generator" onClick={showNavBar} className="disabled">
           Código
         </Link>
+        <Link to="/history" onClick={showNavBar}>
+          Historial
+        </Link>
         <button className="nav_close_btn" onClick={showNavBar}>
           <FaTimes />
         </button>
