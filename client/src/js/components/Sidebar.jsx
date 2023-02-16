@@ -25,7 +25,7 @@ export const Sidebar = () => {
           <img src={TextIconTransparent} alt="Icon" />
           Texto
         </Link>
-        <Link to="/image-generator" className="disabled">
+        <Link to="/image-generator">
           <img src={ImageIconTransparent} alt="Icon" />
           Imágenes
         </Link>

@@ -28,7 +28,7 @@ export const Navbar = () => {
         <Link to="/image-generator" onClick={showNavBar}>
           Imágenes
         </Link>
-        <Link to="/code-generator" onClick={showNavBar}>
+        <Link to="/code-generator" onClick={showNavBar} className="disabled">
           Código
         </Link>
         <button className="nav_close_btn" onClick={showNavBar}>

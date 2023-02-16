@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IconSelection } from '../../assets/icons'
 
-export const HistoryCard = ({ name, img, date, action }) => {
+export const HistoryCard = ({ item, img }) => {
   return (
     <div className="container__card">
       <div className="card_header">
-        <span>{date}</span>
+        <span>{item.createdAt}</span>
         <Link to="/">
           Consulta <img src={IconSelection} alt="Icon" />
         </Link>
@@ -14,9 +14,9 @@ export const HistoryCard = ({ name, img, date, action }) => {
       <div className="card_body">
         <div className="user">
           <img src={img} alt="image" />
-          <p>{name}</p>
+          <p>{item.user.username}</p>
         </div>
-        <span>{action}</span>
+        <span>{item.category}</span>
       </div>
     </div>
   )

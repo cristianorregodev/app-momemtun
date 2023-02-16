@@ -53,7 +53,7 @@ export const Profile = () => {
             <Link to="/image-generator">
               <img src={IconImage} alt="Icon" /> Imágenes
             </Link>
-            <Link to="/code-generator">
+            <Link to="/code-generator" className="disabled">
               <img className="code" src={IconCode} alt="Icon" /> Código
             </Link>
           </div>

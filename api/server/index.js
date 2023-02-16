@@ -8,7 +8,9 @@ class Server {
     this.port = process.env.PORT
     this.path = {
       auth: '/api/auth',
+      allData: '/api/all',
       completions: '/api/completions',
+      images: '/api/images',
       users: '/api/users',
     }
 
@@ -39,7 +41,9 @@ class Server {
 
   routes() {
     this.app.use(this.path.auth, require('../routes/auth'))
+    this.app.use(this.path.allData, require('../routes/all'))
     this.app.use(this.path.completions, require('../routes/completions'))
+    this.app.use(this.path.images, require('../routes/images'))
     this.app.use(this.path.users, require('../routes/users'))
   }
 

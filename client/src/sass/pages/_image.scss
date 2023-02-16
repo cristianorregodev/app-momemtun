@@ -2,7 +2,7 @@ section.image_generation_section {
   background-image: url('/src/assets/img/text_background.webp');
   background-size: cover;
   background-position: top;
-  height: 100vh;
+  height: 100%;
   padding: 6rem 1rem;
   @include tablet {
     background-image: url('/src/assets/img/backgroundWelcomeDesktop.webp');

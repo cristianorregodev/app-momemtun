@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Configuration, OpenAIApi } from 'openai'
 
 import { AiMenu } from '../js/components/AiMenu'
 import { Loader } from '../js/components/Loader'
 import { ImagePlaceholder } from '../assets/img'
 import { imageOptions } from '../js/helpers'
-import { API_KEY, ORGANIZATION_ID } from '../js/config'
+import { API_KEY, BACKEND_API_URL, ORGANIZATION_ID } from '../js/config'
+import { AuthContext } from '../js/Context/AuthContext'
+import { saveApiAnswer } from '../js/helpers/saveApiAnswer'
 
 export const ImageGeneration = () => {
+  const { isAuth } = useContext(AuthContext)
+  const url = `${BACKEND_API_URL}/images`
+
   const [prompt, setPrompt] = useState('')
   const [result, setResult] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -23,6 +28,8 @@ export const ImageGeneration = () => {
     const response = await openai.createImage(object)
     setResult(response.data.data.map((image) => image.url))
     setIsLoading(false)
+    const body = { prompt, answer: result, category: 'Imágenes' }
+    saveApiAnswer(url, isAuth.token, body)
   }
   return (
     <section className="image_generation_section">
@@ -45,7 +52,11 @@ export const ImageGeneration = () => {
         ) : (
           <div className="image_grid">
             {result.map((image) => {
-              return <img key={image} src={image} alt="Image" />
+              return (
+                <a key={image} href={image} target="_blank">
+                  <img src={image} alt="Image" loading="lazy" />
+                </a>
+              )
             })}
           </div>
         )}

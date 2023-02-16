@@ -5,7 +5,7 @@ const ImageSchema = new Schema({
     type: String,
     required: [true, 'El prompt es obligatorio'],
   },
-  images: [String],
+  answer: [String],
   category: {
     type: String,
     required: true,
