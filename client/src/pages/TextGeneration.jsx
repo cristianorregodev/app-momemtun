@@ -28,8 +28,8 @@ export const TextGeneration = () => {
     const response = await openai.createCompletion(object)
     setResult(response.data.choices[0].text)
     setIsLoading(false)
-    const body = { prompt, answer: result, category: 'text' }
     setTimeout(() => {
+      const body = { prompt, answer: response.data.choices[0].text, category: 'text' }
       saveApiAnswer(url, isAuth.token, body)
     }, 2000)
   }
