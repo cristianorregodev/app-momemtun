@@ -9,6 +9,7 @@ export const TextCard = ({ data, img }) => {
         </div>
         <div className="card_title">
           <h4>Resultado</h4>
+          <small>{data.prompt}</small>
         </div>
         <span>
           {new Date(data.createdAt).toLocaleDateString('en-us', {
