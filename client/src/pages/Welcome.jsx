@@ -17,14 +17,14 @@ export const Welcome = () => {
           <img src={IconTextPurple} alt="Icon" />
           <span>Generar y editar texto</span>
         </Link>
-        <a href="#">
+        <Link to="/image-generator">
           <img src={IconImagePurple} alt="Icon" />
           <span>Generación de imágenes</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/code-generator" className="disabled">
           <img src={IconCodePurple} alt="Icon" />
           <span>Generar código</span>
-        </a>
+        </Link>
       </div>
     </section>
   )

@@ -95,3 +95,13 @@ li {
 ::-webkit-scrollbar-thumb {
   background: $firstColor;
 }
+
+a.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  &:hover {
+    img {
+      transform: none;
+    }
+  }
+}

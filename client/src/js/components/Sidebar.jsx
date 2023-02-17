@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { FaHistory } from 'react-icons/fa'
+
+import { AuthContext } from '../Context/AuthContext'
 import {
   HomeIconTransparent,
   TextIconTransparent,
@@ -8,10 +11,11 @@ import {
 } from '../../assets/icons'
 
 export const Sidebar = () => {
+  const { avatar } = useContext(AuthContext)
   return (
     <header className="sidebar">
       <Link to="/profile" className="user_photo">
-        <img src={HomeIconTransparent} alt="" />
+        <img src={avatar} alt="avatar" />
       </Link>
       <nav>
         <Link to="/welcome">
@@ -22,14 +26,20 @@ export const Sidebar = () => {
           <img src={TextIconTransparent} alt="Icon" />
           Texto
         </Link>
-        <a href="#" className="disabled">
+        <Link to="/image-generator">
           <img src={ImageIconTransparent} alt="Icon" />
           Imágenes
-        </a>
-        <a href="#" className="disabled">
+        </Link>
+        <Link to="/code-generator" className="disabled">
           <img src={CodeIconTransparent} alt="Icon" />
           Código
-        </a>
+        </Link>
+        <Link to="/history">
+          <span>
+            <FaHistory />
+          </span>
+          Historial
+        </Link>
       </nav>
     </header>
   )

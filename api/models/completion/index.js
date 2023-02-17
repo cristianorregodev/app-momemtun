@@ -9,6 +9,10 @@ const CompletionSchema = new Schema({
     type: String,
     required: [true, 'Las respuestas son obligatorias'],
   },
+  category: {
+    type: String,
+    required: true,
+  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',

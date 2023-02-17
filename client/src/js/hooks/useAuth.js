@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
 const useAuth = () => {
+  const [avatar, setAvatar] = useState(() => {
+    const avatar = window.sessionStorage.getItem('avatar')
+    return JSON.parse(avatar)
+  })
   const [isAuth, setIsAuth] = useState(() => {
     const user = window.sessionStorage.getItem('userAuth')
     return JSON.parse(user)
@@ -12,12 +16,20 @@ const useAuth = () => {
 
     setIsAuth(JSON.parse(user))
   }
+
   const removeAuth = () => {
     window.sessionStorage.removeItem('userAuth')
     setIsAuth(false)
   }
 
-  return [isAuth, activateAuth, removeAuth]
+  const generateAvatar = (url) => {
+    window.sessionStorage.setItem('avatar', JSON.stringify(url))
+    const avatar = window.sessionStorage.getItem('avatar')
+
+    setAvatar(JSON.parse(avatar))
+  }
+
+  return [isAuth, activateAuth, removeAuth, avatar, generateAvatar]
 }
 
 export default useAuth

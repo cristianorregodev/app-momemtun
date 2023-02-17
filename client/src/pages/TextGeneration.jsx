@@ -1,17 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Configuration, OpenAIApi } from 'openai'
 import { FaRedoAlt } from 'react-icons/fa'
 
 import { AiMenu } from '../js/components/AiMenu'
 import { Loader } from '../js/components/Loader'
 import { completionOptions } from '../js/helpers'
+import { API_KEY, BACKEND_API_URL, ORGANIZATION_ID } from '../js/config'
+import { saveApiAnswer } from '../js/helpers/saveApiAnswer'
+import { AuthContext } from '../js/Context/AuthContext'
 
-export const TextCompletion = () => {
+export const TextGeneration = () => {
+  const { isAuth } = useContext(AuthContext)
+  const url = `${BACKEND_API_URL}/completions`
   const [prompt, setPrompt] = useState('')
   const [result, setResult] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const configuration = new Configuration({
-    apiKey: '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',
+    organization: ORGANIZATION_ID,
+    apiKey: API_KEY,
   })
   const openai = new OpenAIApi(configuration)
 
@@ -22,6 +28,10 @@ export const TextCompletion = () => {
     const response = await openai.createCompletion(object)
     setResult(response.data.choices[0].text)
     setIsLoading(false)
+    setTimeout(() => {
+      const body = { prompt, answer: response.data.choices[0].text, category: 'text' }
+      saveApiAnswer(url, isAuth.token, body)
+    }, 2000)
   }
 
   return (

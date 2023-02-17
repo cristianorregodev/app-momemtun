@@ -14,11 +14,12 @@ const completionGet = async (req, res = response) => {
   res.json({ success: true, completion })
 }
 const completionPost = async (req = request, res = response) => {
-  const { prompt, answer } = req.body
+  const { prompt, answer, category } = req.body
 
   const data = {
     prompt,
     answer,
+    category,
     user: req.user._id,
   }
 

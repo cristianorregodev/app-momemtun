@@ -1,0 +1,28 @@
+<svg id="Componente_4_1" data-name="Componente 4 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.408" height="15.408" viewBox="0 0 15.408 15.408">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Trazado_246" data-name="Trazado 246" d="M510.287,35.237a7.7,7.7,0,1,0,7.7-7.7,7.7,7.7,0,0,0-7.7,7.7" transform="translate(-510.287 -27.533)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-16.46" y1="30.212" x2="-16.428" y2="30.212" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ae80f5"/>
+      <stop offset="0.253" stop-color="#9974ec"/>
+      <stop offset="1" stop-color="#6153d3"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_426" data-name="Grupo 426" transform="translate(17 36)">
+    <g id="Componente_1_1" data-name="Componente 1 – 1" transform="translate(-17 -36)">
+      <g id="Grupo_425" data-name="Grupo 425" clip-path="url(#clip-path)">
+        <g id="Componente_3_1" data-name="Componente 3 – 1" transform="translate(0 0)">
+          <rect id="Rectángulo_206" data-name="Rectángulo 206" width="15.408" height="15.408" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="Grupo_428" data-name="Grupo 428" transform="translate(-253.412 -13.685)">
+    <g id="Grupo_507" data-name="Grupo 507" transform="translate(257.557 17.439)">
+      <path id="Trazado_247" data-name="Trazado 247" d="M528.581,39.437a.4.4,0,0,0,.283-.683L525.316,35.2a.4.4,0,0,0-.566.566L528.3,39.32a.4.4,0,0,0,.283.117" transform="translate(-521.432 -35.087)" fill="#fff"/>
+      <path id="Trazado_248" data-name="Trazado 248" d="M525.032,46.578a.4.4,0,0,0,.283-.117l3.548-3.549a.4.4,0,1,0-.566-.566l-3.549,3.549a.4.4,0,0,0,.283.683" transform="translate(-521.431 -38.679)" fill="#fff"/>
+      <path id="Trazado_249" data-name="Trazado 249" d="M518.593,43.029H525.1a.4.4,0,0,0,0-.8h-6.509a.4.4,0,0,0,0,.8" transform="translate(-518.193 -38.679)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,30 +1,34 @@
-import React from 'react'
-import { AiMenu } from '../js/components/AiMenu'
+import React, { useState, useEffect, useContext } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
-import { ImagePlus } from '../assets/icons'
+import { AuthContext } from '../js/Context/AuthContext'
+import { AiMenu } from '../js/components/AiMenu'
+import { TextCard } from '../js/components/TextCard'
+import { BACKEND_API_URL } from '../js/config'
+import { getData } from '../js/helpers/getData'
+
 export const TextResult = () => {
-    return (
-        <section className="container__result-text">
-            <div className="container container__data">
-                <AiMenu title="Resultado Código" />
-                <p>Code Javascript Sanbox</p>
-                <div className="container__text">
-                    <div>
-                        {/* <p>Texto</p> */}
-                    </div>
-                </div>
-                <div className="container__footer">
-                        <div className="date">
-                            <span>Fecha</span>
-                            <p>Hoy</p>
-                        </div>
-                        <div className="likes">
-                            <span>Puntuación</span>
-                            <p>Tanto</p>
-                        </div>
-                    </div>
-                <button className="goback">Regresar</button>
-            </div>
-        </section>
-    )
+  const { id } = useParams()
+  const { isAuth, avatar } = useContext(AuthContext)
+  const [data, setData] = useState([])
+  const url = `${BACKEND_API_URL}/completions/${id}`
+  useEffect(() => {
+    getData(url, isAuth.token).then((data) => setData(data.completion))
+  }, [])
+  return (
+    <section className="container__generate-text">
+      <div className=" container ">
+        <AiMenu title="Resultados texto" />
+        <h2>Generador de Texto</h2>
+        <div className="card__container">
+          <TextCard img={avatar} data={data} />
+        </div>
+        <div>
+          <Link to="/history" className="goback">
+            Regresar
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
 }

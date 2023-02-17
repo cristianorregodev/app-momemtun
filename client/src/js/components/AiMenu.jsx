@@ -7,7 +7,9 @@ export const AiMenu = ({ title = '' }) => {
       <nav className="ai_menu ">
         <Link to="/text-generator">Texto</Link>
         <Link to="/image-generator">Imágenes</Link>
-        <Link to="/code-generator">Código</Link>
+        <Link to="/code-generator" className="disabled">
+          Código
+        </Link>
       </nav>
     </div>
   )

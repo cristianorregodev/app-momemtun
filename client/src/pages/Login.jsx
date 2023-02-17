@@ -2,12 +2,15 @@ import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+
+import { newAvatar } from '../js/helpers/newAvatar'
 import imageProfile from '../assets/img/imageProfile.webp'
 import { Button } from '../js/components/Button'
 import { AuthContext } from '../js/Context/AuthContext'
+import { BACKEND_API_URL } from '../js/config'
 
 export const Login = () => {
-  const { isAuth, activateAuth } = useContext(AuthContext)
+  const { activateAuth, generateAvatar } = useContext(AuthContext)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
@@ -15,7 +18,7 @@ export const Login = () => {
 
   const userLogin = async (evt) => {
     evt.preventDefault()
-    const resp = await fetch(`http://localhost:8080/api/auth/login`, {
+    const resp = await fetch(`${BACKEND_API_URL}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, password: password }),
@@ -25,6 +28,7 @@ export const Login = () => {
     }
     const user = await resp.json()
     activateAuth(user)
+    generateAvatar(newAvatar(user.user.username))
     navigate('/welcome')
   }
   return (
@@ -37,7 +41,7 @@ export const Login = () => {
             </strong>
           </Link>
           <h1>Inicia sesión</h1>
-          <img src={imageProfile} alt="imageProfile"></img>
+          <img src={imageProfile} alt="imageProfile" style={{ marginBottom: '30px' }} />
 
           <input
             name="email"

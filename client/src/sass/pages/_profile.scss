@@ -4,9 +4,9 @@ section.container__profile {
   background-image: url('/src/assets/img/backgroundProfileM.webp');
   background-size: cover;
   background-position: center 100%;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  padding: 8rem 2rem 0;
+  padding: 8rem 2rem 4rem;
 
   .container__header-profile {
     h2 {
@@ -95,15 +95,50 @@ section.container__profile {
     }
   }
 
+  .history_button {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+    a {
+      background-color: $textWhite;
+      padding: 1rem 2rem;
+      border-radius: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+      box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+      span {
+        background-color: $secondColor;
+        color: $textWhite;
+        padding: 0.5rem 0.8rem 0.2rem;
+        border-radius: 0.4rem;
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        span {
+          transform: translateX(0.6rem);
+        }
+      }
+    }
+  }
+
   @include desktop {
     background-image: url('/src/assets/img/backgroundProfileD.webp');
+    height: 100vh;
     background-position: center;
 
     .wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      column-gap: 10rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10rem;
+      place-items: center;
+
+      .history_button {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
 
       .container__data {
         box-shadow: 0px 50px 40px -60px rgba(66, 6, 134, 0.8);
