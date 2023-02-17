@@ -3,3 +3,4 @@ client/build
 client/src/js/config.js
 api/node_modules
 api/.env
+api/public/
