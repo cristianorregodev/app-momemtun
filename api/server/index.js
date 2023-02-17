@@ -6,6 +6,7 @@ class Server {
   constructor() {
     this.app = express()
     this.port = process.env.PORT
+    this.app.use(express.static('public'))
     this.path = {
       auth: '/api/auth',
       allData: '/api/all',
@@ -45,6 +46,20 @@ class Server {
     this.app.use(this.path.completions, require('../routes/completions'))
     this.app.use(this.path.images, require('../routes/images'))
     this.app.use(this.path.users, require('../routes/users'))
+
+    //! Web routes
+    //Rutas web
+    this.app.use('/login', require('../routes/web'))
+    this.app.use('/register', require('../routes/web'))
+    this.app.use('/profile', require('../routes/web'))
+    this.app.use('/welcome', require('../routes/web'))
+    this.app.use('/text-generator', require('../routes/web'))
+    this.app.use('/code-generator', require('../routes/web'))
+    this.app.use('/image-generator', require('../routes/web'))
+    this.app.use('/history', require('../routes/web'))
+    this.app.use('/text/*', require('../routes/web'))
+    this.app.use('/image/*', require('../routes/web'))
+    this.app.use('/code/*', require('../routes/web'))
   }
 
   start() {
