@@ -61,9 +61,9 @@ export const Login = () => {
             <span className="message__error">El usuario y/ó contraseña es incorrecto.</span>
           )}
 
-          <a href="#">
+          <Link to="/reset-password">
             <p className="forget__password">Olvidaste tu contraseña?</p>
-          </a>
+          </Link>
         </div>
         <div className="container__button">
           <Button text="Ingresar" clase="buttonLogin" />

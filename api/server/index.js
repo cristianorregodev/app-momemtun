@@ -51,6 +51,7 @@ class Server {
     //Rutas web
     this.app.use('/login', require('../routes/web'))
     this.app.use('/register', require('../routes/web'))
+    this.app.use('/reset-password', require('../routes/web'))
     this.app.use('/profile', require('../routes/web'))
     this.app.use('/welcome', require('../routes/web'))
     this.app.use('/text-generator', require('../routes/web'))

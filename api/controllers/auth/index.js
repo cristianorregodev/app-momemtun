@@ -27,4 +27,15 @@ const login = async (req = request, res = response) => {
   }
 }
 
-module.exports = { login }
+const reset = async (req = request, res = response) => {
+  const { email } = req.body
+  try {
+    const userEmail = await User.findOne({ email })
+    res.json({ userEmail })
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ result: false })
+  }
+}
+
+module.exports = { login, reset }
