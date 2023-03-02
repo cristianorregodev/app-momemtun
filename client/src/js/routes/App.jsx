@@ -13,6 +13,7 @@ import {
   CodeResult,
   TextResult,
   ImageResult,
+  ResetPassword,
 } from '../../pages'
 
 import { Layout } from '../containers/Layout'
@@ -28,6 +29,10 @@ export const App = () => {
           <Routes>
             <Route path="/" element={!isAuth ? <Home /> : <Navigate to="/profile" />} />
             <Route path="/login" element={!isAuth ? <Login /> : <Navigate to="/" />} />
+            <Route
+              path="/reset-password"
+              element={!isAuth ? <ResetPassword /> : <Navigate to="/" />}
+            />
             <Route path="/register" element={!isAuth ? <Register /> : <Navigate to="/" />} />
             <Route path="/profile" element={isAuth ? <Profile /> : <Navigate to="/" />} />
             <Route path="/welcome" element={isAuth ? <Welcome /> : <Navigate to="/" />} />

@@ -10,7 +10,7 @@ export const Welcome = () => {
       </div>
       <div className="welcome_text container">
         <p>Empezar</p>
-        <span>Lorem, ipsum dolor sit.</span>
+        <span>¡Donde la Creatividad Comienza!</span>
       </div>
       <div className="welcome_buttons container">
         <Link to="/text-generator">

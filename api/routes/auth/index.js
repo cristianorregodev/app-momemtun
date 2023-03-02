@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const { check } = require('express-validator')
 
-const { login } = require('../../controllers/auth')
+const { login, reset } = require('../../controllers/auth')
 const { emailExistsForLogin, activeUser } = require('../../helpers/databaseValidators')
 const { fieldValidation } = require('../../middlewares/fieldValidation')
 
@@ -18,5 +18,6 @@ router.post(
   ],
   login
 )
+router.post('/reset-password', reset)
 
 module.exports = router

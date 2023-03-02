@@ -10,6 +10,7 @@ import { CodeGeneration } from './CodeGeneration'
 import { CodeResult } from './CodeResult'
 import { TextResult } from './TextResult'
 import { ImageResult } from './ImageResult'
+import { ResetPassword } from './ResetPassword'
 
 export {
   Login,
@@ -24,4 +25,5 @@ export {
   CodeResult,
   TextResult,
   ImageResult,
+  ResetPassword,
 }
